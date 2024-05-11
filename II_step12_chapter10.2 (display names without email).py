@@ -40,13 +40,14 @@ print(*result_list2)
 result_list3 = []
 for i in users:
     for k, v in i.items():
+        # Если НЕ вызывать ключ -> i['email'], ошибки не будет. Т.о. правильно -> 'email' not in i
         if (k == 'email' and v == '') or 'email' not in i:
             if i['name'] in result_list3:
                 continue
             result_list3.append(i['name'])
 print(*sorted(result_list3))
 
-#Решение 4 double cycle key value items() set()
+#Решение 4 double list_comprehension(cycle) key value items() set()
 
 result_list4 = sorted(list(set([i['name'] for i in users for k, v in i.items() if (k == 'email' and v == '') or 'email' not in i])))
 print(*result_list4)
