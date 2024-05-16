@@ -53,3 +53,11 @@ for pet, first_name, second_name, age in pets:
     result4[owner] = result4.get(owner, []) + [pet]
 
 print(result4)
+
+# Решение №5 defaultdict
+from collections import defaultdict
+result5 = defaultdict(list)
+for i in pets:
+        result5[i[1:]].append(i[0])
+
+print(dict(result5))
