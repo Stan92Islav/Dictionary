@@ -59,12 +59,12 @@ for i in nums:
 # Hello, World!
 # Sample Output 1:
 # 4433555555666110966677755531111
-#
+
 # Sample Input 2:
 # He said: "I can solve this problem".
 # Sample Output 2:
 # 44330777724443111110444022226607777666555888330844444777707777666225553361
-#
+
 # Sample Input 3:
 # Bee   Geek!!!
 # Sample Output 3:

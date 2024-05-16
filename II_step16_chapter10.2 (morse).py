@@ -35,10 +35,10 @@ d = dict(zip(letters, morse))
 
 string = 'interstellar'.upper()
 
-# Решение №1
+# Решение №1 list_comprehension
 print(*[value for i in string for key, value in d.items() if i == key])
 
-# Решение №2
+# Решение №2 cycle
 for i in string:
     for key, value in d.items():
         # Если символ строки имеется в словаре

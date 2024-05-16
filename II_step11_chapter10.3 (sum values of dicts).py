@@ -6,7 +6,7 @@
 dict1 = {'a': 100, 'z': 333, 'b': 200, 'c': 300, 'd': 45, 'e': 98, 't': 76, 'q': 34, 'f': 90, 'm': 230}
 dict2 = {'a': 300, 'b': 200, 'd': 400, 't': 777, 'c': 12, 'p': 123, 'w': 111, 'z': 666}
 
-# Решение №1
+# Решение №1 in
 result = {}
 for k, v in dict1.items():
     if k not in result:
@@ -20,7 +20,7 @@ for k, v in dict2.items():
 
 print(result)
 
-# Решение №2
+# Решение №2 get
 result2 = {}
 for k, v in dict1.items():
     result2[k] = result2.get(k, 0) + v
@@ -30,17 +30,21 @@ for k, v in dict2.items():
 
 print(result2)
 
-# Решение №3
+# Решение №3 Counter
 from collections import Counter
-result3 = {}
 result3 = Counter(dict1) + Counter(dict2)
 
-print(result3)
+print(dict(result3))
 
-# Решение №4
+# Решение №4 dict_comprehension get set
 result4 = {i: dict1.get(i, 0) + dict2.get(i, 0) for i in set(dict1.keys() | dict2.keys())}
 
 print(result4)
+
+# Решение №5 Counter update
+result5 = Counter(dict1)
+result5.update(dict2)
+print(dict(result5))
 
 
 
